@@ -75,4 +75,4 @@ const searchTerm2 = 'Orwell'
 console.log(author.indexOf(searchTerm1)) // 8
 console.log(author.indexOf(searchTerm2)) // -1
  
-// ------------.every------------
+// ------------.every-----------
