@@ -61,6 +61,15 @@ console.log(str.slice(-9)) // 'very best
 // ------------.push------------
 // adds an item from the end of an array
 
+// Given the number (n), this fuction populates an array with all numbers up to and including that number, but excluding zero. Using the push array method
+function monkeyCount(n) {
+    let result = []
+    for (let i = 1; i <= n; i++) {
+        result.push(i)
+    }
+    return result
+}
+
 // ------------.unshift------------
 // adds an item to the beginning of an array
 
