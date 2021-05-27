@@ -14,6 +14,7 @@
 // toLowerCase
 // toUpperCase
 // trim
+//
 
 // Give a short description of what the method does, how it works, it's time complexity (if appropriate), and give three examples of it in action!
 
