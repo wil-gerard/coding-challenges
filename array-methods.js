@@ -40,6 +40,15 @@ function getAverage(marks){
 // ------------------------.filter------------------------
 // filter returns a new array of elements that return true for the provided function
 
+const [entries, setEntries] = useState([
+    { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
+    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
+    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
+]);
+
+<EntryList entries={entries.filter((entry) => entry.author === 'mario')} title="Mario's entries" />
+// this filters blog entries to display only ones with the mario value of the author key//
+
 // ------------------------.forEach------------------------
 // forEach runs a function once for every element of the array
 
