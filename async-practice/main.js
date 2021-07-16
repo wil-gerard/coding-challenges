@@ -192,45 +192,137 @@ let isShopOpen = false;
 // console.log("cleaning tables")
 // console.log("taking orders")
 
-let time = (ms) => {
-    return new Promise((resolve, reject) => {
-        if(isShopOpen == true) {
-            setTimeout(resolve, ms);
-        } else {
-            reject(console.log("shop is closed"));
-        }
-    });
-}
+// let time = (ms) => {
+//     return new Promise((resolve, reject) => {
+//         if(isShopOpen == true) {
+//             setTimeout(resolve, ms);
+//         } else {
+//             reject(console.log("shop is closed"));
+//         }
+//     });
+// }
 
-async function kitchen() {
-    try {
-        await time(2000)
-        console.log(`${stock.fruits[3]} selected`);
-        console.log("start production");
+// async function kitchen() {
+//     try {
+//         await time(2000)
+//         console.log(`${stock.fruits[3]} selected`);
+//         console.log("start production");
 
-        await time(2000)
-        console.log("fruit is cut")
+//         await time(2000)
+//         console.log("fruit is cut")
 
-        await time(1000)
-        console.log(`${stock.liquids[0]} and ${stock.liquids[1]} added`)
+//         await time(1000)
+//         console.log(`${stock.liquids[0]} and ${stock.liquids[1]} added`)
 
-        await time(1000)
-        console.log("machine is started")
+//         await time(1000)
+//         console.log("machine is started")
 
-        await time(2000)
-        console.log(`${stock.holders[0]} is ready`)
+//         await time(2000)
+//         console.log(`${stock.holders[0]} is ready`)
 
-        await time(3000)
-        console.log(`${stock.toppings[0]} was put on top`)
+//         await time(3000)
+//         console.log(`${stock.toppings[0]} was put on top`)
 
-        await time(2000)
-        console.log("ice cream is served")
+//         await time(2000)
+//         console.log("ice cream is served")
 
-    } catch(error) {
-        console.log("customer left", error);
-    } finally {
-        console.log("shop is now closed");
-    }
-}
+//     } catch(error) {
+//         console.log("customer left", error);
+//     } finally {
+//         console.log("shop is now closed");
+//     }
+// }
 
-kitchen();
+// kitchen();
+
+// let thing = ["Table", "Chair", "Fan"];
+// let [a, b, c] = thing;
+
+// console.log(a)
+// console.log(thing[0])
+
+// function runners() {
+//     return ["Sandra", "Ola", "Chi"];
+// }
+
+// var [one, b, two] = runners();
+// console.log(one); //Output: Sandra
+// console.log(b); //Output: Ola
+// console.log(two); //Output: Chi
+
+// console.log(runners[1])
+
+// var a, b;
+// [a = 40, b = 4] = [];
+// console.log(a); //Output: 40
+// console.log(b); //Output: 4
+
+// [a = 40, b = 4] = [,600];
+// console.log(a); //Output: 1
+// console.log(b); //Output: 23
+
+// var [first = "Cotlin", second = first] = [];
+// console.log(first); //Output: Cotlin
+// console.log(second); //Output: Cotlin
+
+// var [first = "Cotlin", second = first] = ["Koku"];
+// console.log(first); //Output: Koku
+// console.log(second); //Output: Koku
+
+// var [first = "Cotlin", second = first] = [["bob"], "Lydia"];
+// console.log(first); //Output: Koku
+// console.log(second); //Output: Lydia
+// function pluto(){
+//     return Math.random()
+// }
+
+// var planets = ["Mercury", "Earth", "Venus", ["bob","doug"], pluto(), ["shit"]];
+// var [first, , third, ...others] = planets;
+
+// console.log(first); //Output: Mercury
+// console.log(third); //Output: Venus
+// console.log(others); //Output: ["Mars", "Pluto", "Saturn"]
+
+// let planets = ["Mercury", "Earth", "Venus", "Mars", "Pluto", "Saturn"];
+
+// let [first, second, ...rest] = [planets, , , , , ...planets];
+
+// console.log(first); //Output: Mercury
+// console.log(second); //Output: Earth
+// console.log(rest); //Output: ["Venus", "Mars", "Pluto", "Saturn"]
+
+
+// var planets = ["Mercury", "Earth", "Venus", "Mars", "Pluto", "Saturn"];
+
+// var [first, second, third, fourth, ...rest] = ["Mercury", ...planets];
+
+// console.log(first); //Output: Mercury
+// console.log(second); //Output: Mercury
+// console.log(third); //Output: Mercury
+// console.log(fourth); //Output: Mercury
+// console.log(rest); //Output: ["Earth", "Venus", "Mars", "Pluto", "Saturn"]
+
+// var planets = ["Mercury", "Earth", "Venus", "Mars", "Pluto", "Saturn"];
+
+// var [first, second, third, fourth, ...rest] = ["Mercury", "Earth", ...planets];
+
+// console.log(first); //Output: Mercury
+// console.log(second); //Output: Earth
+// console.log(third); //Output: Mercury
+// console.log(fourth); //Output: Earth
+// console.log(rest); //Output: ["Venus", "Mars", "Pluto", "Saturn"]
+
+// var a, b;
+// [a, b] = ["Male", "Female"];
+// [a, b] = [b, a];
+
+// console.log(a); //Output: Female
+// console.log(b); //Output: Male
+
+var places = ["first", "second", "third", "fourth"];
+var [a, b, , d] = [f, ...rest] = places;
+
+console.log(a); //Output: first
+console.log(d); //Output: fourth
+console.log(f); //Output: first
+console.log(rest); //Output: ["second", "third", "fourth"]
