@@ -34,6 +34,8 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123] */
   
 //   console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));
 
+
+// ===========> MY ANSWER <===========
 function filter_list(l) {
     let filteredList = []
     l.forEach(listItem => {
@@ -43,3 +45,30 @@ function filter_list(l) {
     })
     return filteredList
 }
+
+// PARAMETER (INPUT) [1,'a','b',0,15,'0','2']
+// RETURNS [1, 0, 15]
+
+
+// ===========> THIS DOES NOT WORK <===========
+///* This does NOT work because the callback function of filter is first running a typeof check on v and then returns the value. then the filter method checks to see if that value is true, if the value is 0, it is considered falsey and it does not return. */
+function filter_list(l) {
+    return l.filter((v) => {
+        if (typeof v == "number") {
+            return v
+        }
+    })
+  }
+
+// PARAMETER (INPUT) [1,'a','b',0,15,'0','2']
+// RETURNS [1, 15]
+
+// ===========> BEST ANSWER <===========
+/* This DOES work because a typeof check for 0 returns true for 'number'. it doesn't care then that the value is number 0. it checks for true first and then returns the value*/
+function filter_list(l) {
+    return l.filter((v) => {return typeof v == 'number'})
+}
+
+// PARAMETER (INPUT) [1,'a','b',0,15,'0','2']
+// RETURNS [1, 0, 15]
+
