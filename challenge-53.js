@@ -32,6 +32,6 @@ function declareWinner(fighter1, fighter2, firstAttacker) {
     }
 
     for (let i = attackerHealth; i <= 0; i - defender.damagePerAttack){
-        if (i < )
+        if (i < 0)
     }
 }
