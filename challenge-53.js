@@ -1,37 +1,18 @@
-/* Create a function that returns the name of the winner in a fight between two fighters.
+/* Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 
-Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
+Write a function which takes a list of strings and returns each line prepended by the correct number.
 
-Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
 
-Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
+Examples:
 
-Example:
-function Fighter(name, health, damagePerAttack) {
-        this.name = name;
-        this.health = health;
-        this.damagePerAttack = damagePerAttack;
-        this.toString = function() { return this.name; }
-} */
+number([]) // => []
+number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"] */
 
-
-function declareWinner(fighter1, fighter2, firstAttacker) {
-    if (firstAttacker == fighter1.name) {
-        let attacker = fighter1
-        let defender = fighter2 - fighter1.damagePerAttack
-        let attackerHealth = fighter1.health
-        let defenderHealth = fighter2.health - fighter1.damagePerAttack
-
-        console.log(`The attacker is ${fighter1} with ${attackerHealth} starting health and the defender is ${fighter2} with ${defenderHealth} health after the first attack`)
-    } else if (firstAttacker == fighter2.name) {
-        let attacker = fighter2
-        let defender = fighter1 - fighter2.damagePerAttack
-        let attackerHealth = fighter2.health
-        let defenderHealth = fighter1.health - fighter2.damagePerAttack
-        console.log(`The attacker is ${fighter2} with ${attackerHealth} starting health and the defender is ${fighter1} with ${defenderHealth} health after the first attack`)
-    }
-
-    for (let i = attackerHealth; i <= 0; i - defender.damagePerAttack){
-        if (i < 0)
+let number = function(array) {
+    if (array === []) {
+        return []
+    } else {
+        return array.map((element, index) => `${index + 1}: ${element}`)
     }
 }
