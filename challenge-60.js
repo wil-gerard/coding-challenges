@@ -14,23 +14,28 @@ function stringTransformer(str) {
     return str.trim().replace(/  +/g, ' ').split(' ').reverse().map(word => word.replace(regexLowerUpper)).join(' ')
 }
 
-function isUpperCase(str) {
-    return str === str.toUpperCase();
-}
+// function isUpperCase(element) {
+//     return element === element.toUpperCase();
+// }
 
-function isLowerCase(str) {
-    return str === str.toLowerCase();
-}
+// function isLowerCase(element) {
+//     return element === element.toLowerCase();
+// }
 
-function stringTransformer(str) {
-    let splitStr = str.trim().replace(/  +/g, ' ').split(' ').reverse().map(word => word.split(''))
+// function stringTransformer(str) {
+//     let splitStr = str.trim().replace(/  +/g, ' ').split(' ').reverse().map(word => word.split(''))
     
-    splitStr.forEach(element, index, array => {
-        if (isUpperCase(letter)) {
-            return letter.toLowerCase()
-        } else if (isLowerCase(letter)) {
-            return letter.toUpperCase()
-        }
-    })
-}
+//     splitStr.map((element, index, array) => {
+//         console.log(element)
+//         return element.map(element => {
+//             console.log(element)
+//             if (isUpperCase(element)) {
+//                 return element.toLowerCase()
+//             } else if (isLowerCase(element)) {
+//                 return element.toUpperCase()
+//             }
+//         })    
+//     })
+//     console.log(splitStr)
+// }
 
