@@ -8,6 +8,7 @@ A few examples:
 If the average length is not an integer, use Math.round().
 The input array's length > 1 */
 
+
 function averageLength(arr) { 
     let avgLengthArr = []
     arr.map(value => avgLengthArr.push(value.length))
