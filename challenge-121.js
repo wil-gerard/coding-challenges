@@ -11,11 +11,11 @@
 
 function evenNumbersFromArrayEnd(arr, length) {
     // filter out odd numbers
-    // slice from 0 index to the given length parameter number
+    // slice from the end of the array based off the given length parameter
     // return that sliced array
     return arr.filter(num => num % 0).slice(`-${length}`)
-  }
-  
-  console.log(evenNumbersFromArrayEnd([1,2,3,4,5,6], 2) [4,6])
-  console.log(evenNumbersFromArrayEnd([-2,2,0,4,2,6], 3) [6,2,4])
-  console.log(evenNumbersFromArrayEnd([-100,-5,1,1,1,1,2,-50,1,1,4], 4) [-100,2,-50,4])
+}
+
+console.log(evenNumbersFromArrayEnd([1, 2, 3, 4, 5, 6], 2), [4, 6])
+console.log(evenNumbersFromArrayEnd([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2), [-8, 26])
+console.log(evenNumbersFromArrayEnd([-100, -5, 1, 1, 1, 1, 2, -50, 1, 1, 4], 4), [-100, 2, -50, 4])
